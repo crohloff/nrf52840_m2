@@ -1,0 +1,853 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 3
+Title "nrf52840_m.2 module"
+Date "2020-12-02"
+Rev "0.1"
+Comp "crohloff"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 7000 6800 0    50   ~ 0
+VBUS_nRF = 5V\nVDD_nRF = 3.3V\nVDD_BAT = 3.7-4.2V
+Text Notes 600  700  0    50   ~ 0
+Power path management
+Wire Notes Line
+	500  500  10600 500 
+Wire Notes Line
+	500  3700 10600 3700
+$Comp
+L Device:R_Small R2
+U 1 1 5D35ED4B
+P 800 1700
+F 0 "R2" H 859 1746 50  0000 L CNN
+F 1 "100k" H 859 1655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 800 1700 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_10.pdf" H 800 1700 50  0001 C CNN
+F 4 " RES SMD 100K OHM 5% 1/16W 0402 " H 800 1700 50  0001 C CNN "Description"
+F 5 " 311-100KJRCT-ND " H 800 1700 50  0001 C CNN "Digikey"
+F 6 "C106234" H 800 1700 50  0001 C CNN "LCSC"
+F 7 "RC0402JR-07100KL" H 800 1700 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 800 1700 50  0001 C CNN "Manufacturer"
+	1    800  1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Zener_Small D1
+U 1 1 5D35F5A3
+P 1050 1550
+F 0 "D1" H 1050 1345 50  0000 C CNN
+F 1 "MBR120" H 1050 1436 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" V 1050 1550 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/MBR120VLSFT1-D.PDF" V 1050 1550 50  0001 C CNN
+F 4 " DIODE SCHOTTKY 20V 1A SOD123FL " H 1050 1550 50  0001 C CNN "Description"
+F 5 " MBR120VLSFT1GOSCT-ND " H 1050 1550 50  0001 C CNN "Digikey"
+F 6 "C223608" H 1050 1550 50  0001 C CNN "LCSC"
+F 7 " MBR120VLSFT1G " H 1050 1550 50  0001 C CNN "MFG P/N"
+F 8 "ON Semiconductor" H 1050 1550 50  0001 C CNN "Manufacturer"
+	1    1050 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C21
+U 1 1 5D36024C
+P 1250 1700
+F 0 "C21" H 1342 1746 50  0000 L CNN
+F 1 "10uF" H 1342 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1250 1700 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Samsung%20PDFs/CL_Series_MLCC_ds.pdf" H 1250 1700 50  0001 C CNN
+F 4 " CAP CER 10UF 6.3V X5R 0402 " H 1250 1700 50  0001 C CNN "Description"
+F 5 " 1276-1451-1-ND " H 1250 1700 50  0001 C CNN "Digikey"
+F 6 "C15525" H 1250 1700 50  0001 C CNN "LCSC"
+F 7 " CL05A106MQ5NUNC " H 1250 1700 50  0001 C CNN "MFG P/N"
+F 8 "Samsung Electro-Mechanics" H 1250 1700 50  0001 C CNN "Manufacturer"
+	1    1250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5D360621
+P 800 1850
+F 0 "#PWR021" H 800 1600 50  0001 C CNN
+F 1 "GND" H 805 1677 50  0000 C CNN
+F 2 "" H 800 1850 50  0001 C CNN
+F 3 "" H 800 1850 50  0001 C CNN
+	1    800  1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR022
+U 1 1 5D3608B9
+P 1250 1850
+F 0 "#PWR022" H 1250 1600 50  0001 C CNN
+F 1 "GND" H 1255 1677 50  0000 C CNN
+F 2 "" H 1250 1850 50  0001 C CNN
+F 3 "" H 1250 1850 50  0001 C CNN
+	1    1250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:AP2112K-3.3 U2
+U 1 1 5D361F41
+P 2400 1650
+F 0 "U2" H 2400 1992 50  0000 C CNN
+F 1 "AP2112K-3.3" H 2400 1901 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2400 1975 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/AP2112.pdf" H 2400 1750 50  0001 C CNN
+F 4 "AP2112K-3.3TRG1 " H 2400 1650 50  0001 C CNN "MFG P/N"
+F 5 " AP2112K-3.3TRG1DICT-ND " H 2400 1650 50  0001 C CNN "Digikey"
+F 6 " IC REG LINEAR 3.3V 600MA SOT25 " H 2400 1650 50  0001 C CNN "Description"
+F 7 "C51118" H 2400 1650 50  0001 C CNN "LCSC"
+F 8 "Diodes Incorporated" H 2400 1650 50  0001 C CNN "Manufacturer"
+	1    2400 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5D364F02
+P 1950 1650
+F 0 "R3" V 2150 1650 50  0000 C CNN
+F 1 "100k" V 2050 1650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1950 1650 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_10.pdf" H 1950 1650 50  0001 C CNN
+F 4 " RES SMD 100K OHM 5% 1/16W 0402 " H 1950 1650 50  0001 C CNN "Description"
+F 5 " 311-100KJRCT-ND " H 1950 1650 50  0001 C CNN "Digikey"
+F 6 "C106234" H 1950 1650 50  0001 C CNN "LCSC"
+F 7 "RC0402JR-07100KL" H 1950 1650 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 1950 1650 50  0001 C CNN "Manufacturer"
+	1    1950 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 5D3651E3
+P 2400 2000
+F 0 "#PWR023" H 2400 1750 50  0001 C CNN
+F 1 "GND" H 2405 1827 50  0000 C CNN
+F 2 "" H 2400 2000 50  0001 C CNN
+F 3 "" H 2400 2000 50  0001 C CNN
+	1    2400 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C22
+U 1 1 5D368878
+P 2800 1700
+F 0 "C22" H 2892 1746 50  0000 L CNN
+F 1 "10uF" H 2892 1655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2800 1700 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Samsung%20PDFs/CL_Series_MLCC_ds.pdf" H 2800 1700 50  0001 C CNN
+F 4 " CAP CER 10UF 6.3V X5R 0402 " H 2800 1700 50  0001 C CNN "Description"
+F 5 " 1276-1451-1-ND " H 2800 1700 50  0001 C CNN "Digikey"
+F 6 "C15525" H 2800 1700 50  0001 C CNN "LCSC"
+F 7 " CL05A106MQ5NUNC " H 2800 1700 50  0001 C CNN "MFG P/N"
+F 8 "Samsung Electro-Mechanics" H 2800 1700 50  0001 C CNN "Manufacturer"
+	1    2800 1700
+	1    0    0    -1  
+$EndComp
+Text GLabel 2800 1450 2    50   Input ~ 0
+VDD_nRF
+Text GLabel 1250 900  2    50   Input ~ 0
+VDD_BAT
+Text GLabel 800  900  2    50   Input ~ 0
+VBUS_nRF
+Wire Wire Line
+	2100 1550 1850 1550
+Wire Wire Line
+	1850 1650 1850 1550
+Connection ~ 1850 1550
+Wire Wire Line
+	2050 1650 2100 1650
+Wire Wire Line
+	2700 1550 2800 1550
+Wire Wire Line
+	2800 1550 2800 1450
+Wire Wire Line
+	2800 1550 2800 1600
+Connection ~ 2800 1550
+Wire Wire Line
+	2800 1800 2800 1850
+Wire Wire Line
+	2400 1950 2400 2000
+Wire Wire Line
+	1250 1800 1250 1850
+Wire Wire Line
+	800  1800 800  1850
+Wire Wire Line
+	800  1600 800  1550
+Wire Wire Line
+	800  1550 950  1550
+Connection ~ 800  1550
+Wire Wire Line
+	1250 1550 1250 1600
+Wire Wire Line
+	1250 1550 1250 1350
+Connection ~ 1250 1550
+Wire Wire Line
+	950  1150 800  1150
+Wire Wire Line
+	800  1150 800  1550
+Connection ~ 800  1150
+Wire Wire Line
+	1250 950  1250 900 
+Wire Wire Line
+	800  900  800  1150
+Wire Wire Line
+	1250 1550 1850 1550
+Wire Wire Line
+	1150 1550 1250 1550
+$Comp
+L power:GND #PWR024
+U 1 1 5D3751B3
+P 2800 1850
+F 0 "#PWR024" H 2800 1600 50  0001 C CNN
+F 1 "GND" H 2805 1677 50  0000 C CNN
+F 2 "" H 2800 1850 50  0001 C CNN
+F 3 "" H 2800 1850 50  0001 C CNN
+	1    2800 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Battery_Management:MCP73831-2-OT U3
+U 1 1 5D376B89
+P 8000 1800
+F 0 "U3" H 7650 2200 50  0000 C CNN
+F 1 "MCP73831-2-OT" H 7600 2100 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8050 1550 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 7850 1750 50  0001 C CNN
+F 4 " MCP73831T-2ATI/OTCT-ND " H 8000 1800 50  0001 C CNN "Digikey"
+F 5 "MCP73831T-2ATI/OT" H 8000 1800 50  0001 C CNN "MFG P/N"
+F 6 " IC CONTROLLR LI-ION 4.2V SOT23-5 " H 8000 1800 50  0001 C CNN "Description"
+F 7 "C14879" H 8000 1800 50  0001 C CNN "LCSC"
+F 8 "Microchip Tech" H 8000 1800 50  0001 C CNN "Manufacturer"
+	1    8000 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 8000 1200 2    50   Input ~ 0
+VBUS_nRF
+Wire Wire Line
+	7150 1300 8000 1300
+Wire Wire Line
+	8000 1300 8000 1500
+Wire Wire Line
+	8000 1200 8000 1300
+Connection ~ 8000 1300
+$Comp
+L Device:LED_Small D3
+U 1 1 5D3786B0
+P 7500 2550
+F 0 "D3" H 7500 2345 50  0000 C CNN
+F 1 "LED_ORG" H 7500 2436 50  0000 C CNN
+F 2 "LED_SMD:LED_0603_1608Metric" V 7500 2550 50  0001 C CNN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS-22-99-0186/LTST-C190KFKT.PDF" V 7500 2550 50  0001 C CNN
+F 4 "LTST-C190KFKT" H 7500 2550 50  0001 C CNN "MFG P/N"
+F 5 " 160-1434-1-ND " H 7500 2550 50  0001 C CNN "Digikey"
+F 6 " LED ORANGE CLEAR CHIP SMD " H 7500 2550 50  0001 C CNN "Description"
+F 7 "Lite-On" H 7500 2550 50  0001 C CNN "Manufacturer"
+F 8 "C157740" H 7500 2550 50  0001 C CNN "LCSC"
+F 9 "DNP" H 7500 2700 50  0000 C CNN "DNP"
+	1    7500 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_Small R6
+U 1 1 5D378D62
+P 7900 2550
+F 0 "R6" V 7800 2550 50  0000 C CNN
+F 1 "1k" V 7900 2550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7900 2550 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_10.pdf" H 7900 2550 50  0001 C CNN
+F 4 " RES SMD 1K OHM 5% 1/16W 0402 " H 7900 2550 50  0001 C CNN "Description"
+F 5 " 311-1.0KJRCT-ND " H 7900 2550 50  0001 C CNN "Digikey"
+F 6 "C105637" H 7900 2550 50  0001 C CNN "LCSC"
+F 7 "RC0402JR-071KL" H 7900 2550 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 7900 2550 50  0001 C CNN "Manufacturer"
+F 9 "DNP" V 8000 2550 50  0000 C CNN "DNP"
+	1    7900 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R5
+U 1 1 5D378EF1
+P 7500 2200
+F 0 "R5" V 7400 2200 50  0000 C CNN
+F 1 "2k" V 7500 2200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7500 2200 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_10.pdf" H 7500 2200 50  0001 C CNN
+F 4 " RES SMD 2K OHM 1% 1/16W 0402 " H 7500 2200 50  0001 C CNN "Description"
+F 5 " 311-2KLRCT-ND " H 7500 2200 50  0001 C CNN "Digikey"
+F 6 "C60488" H 7500 2200 50  0001 C CNN "LCSC"
+F 7 "RC0402FR-072KL" H 7500 2200 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 7500 2200 50  0001 C CNN "Manufacturer"
+	1    7500 2200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7150 2550 7400 2550
+Wire Wire Line
+	7150 1300 7150 2550
+Wire Wire Line
+	7600 2550 7800 2550
+Wire Wire Line
+	8000 2550 8400 2550
+Wire Wire Line
+	8400 1900 8400 2550
+Wire Wire Line
+	7600 2200 8000 2200
+Wire Wire Line
+	8000 2200 8000 2100
+Wire Wire Line
+	7400 2200 7300 2200
+Wire Wire Line
+	7300 2200 7300 1900
+Wire Wire Line
+	7300 1900 7600 1900
+$Comp
+L Device:C_Small C23
+U 1 1 5D37BCDA
+P 8650 1850
+F 0 "C23" H 8742 1896 50  0000 L CNN
+F 1 "10uF" H 8742 1805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 8650 1850 50  0001 C CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Samsung%20PDFs/CL_Series_MLCC_ds.pdf" H 8650 1850 50  0001 C CNN
+F 4 " CAP CER 10UF 6.3V X5R 0402 " H 8650 1850 50  0001 C CNN "Description"
+F 5 " 1276-1451-1-ND " H 8650 1850 50  0001 C CNN "Digikey"
+F 6 "C15525" H 8650 1850 50  0001 C CNN "LCSC"
+F 7 " CL05A106MQ5NUNC " H 8650 1850 50  0001 C CNN "MFG P/N"
+F 8 "Samsung Electro-Mechanics" H 8650 1850 50  0001 C CNN "Manufacturer"
+	1    8650 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR027
+U 1 1 5D37C048
+P 8650 2000
+F 0 "#PWR027" H 8650 1750 50  0001 C CNN
+F 1 "GND" H 8655 1827 50  0000 C CNN
+F 2 "" H 8650 2000 50  0001 C CNN
+F 3 "" H 8650 2000 50  0001 C CNN
+	1    8650 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8650 1950 8650 2000
+Wire Wire Line
+	8400 1700 8650 1700
+Wire Wire Line
+	8650 1700 8650 1750
+Wire Wire Line
+	8650 1700 8650 1600
+Connection ~ 8650 1700
+Text GLabel 8650 1600 2    50   Input ~ 0
+VDD_BAT
+Text Notes 9950 3550 0    50   ~ 0
+Prog Resistor:\n10k = 100mA\n5k = 200mA\n2k = 500mA\n1k = 1A
+Text Notes 6400 700  0    50   ~ 0
+Charging
+$Comp
+L Device:Q_PMOS_GSD Q1
+U 1 1 5D38A7B8
+P 1150 1150
+F 0 "Q1" H 1356 1196 50  0000 L CNN
+F 1 "pmos" H 1356 1105 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1350 1250 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/NTR1P02T1-D.PDF" H 1150 1150 50  0001 C CNN
+F 4 "NTR1P02T1G" H 1150 1150 50  0001 C CNN "MFG P/N"
+F 5 " NTR1P02T1GOSTR-ND " H 1150 1150 50  0001 C CNN "Digikey"
+F 6 " MOSFET P-CH 20V 1A SOT-23 " H 1150 1150 50  0001 C CNN "Description"
+F 7 "C129192" H 1150 1150 50  0001 C CNN "LCSC"
+F 8 "ON Semicon" H 1150 1150 50  0001 C CNN "Manufacturer"
+	1    1150 1150
+	1    0    0    -1  
+$EndComp
+Text GLabel 4700 1450 2    50   Input ~ 0
+VDD_nRF
+$Comp
+L Device:R_Small R4
+U 1 1 5D3752EE
+P 4700 1700
+F 0 "R4" H 4759 1746 50  0000 L CNN
+F 1 "68R" H 4759 1655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 4700 1700 50  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-AC_51_RoHS_L_6.pdf" H 4700 1700 50  0001 C CNN
+F 4 " RES SMD 68 OHM 1% 1/16W 0402 " H 4700 1700 50  0001 C CNN "Description"
+F 5 " YAG3507CT-ND " H 4700 1700 50  0001 C CNN "Digikey"
+F 6 "C227192" H 4700 1700 50  0001 C CNN "LCSC"
+F 7 "AC0402FR-0768RL" H 4700 1700 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 4700 1700 50  0001 C CNN "Manufacturer"
+F 9 "DNP" H 4550 1700 50  0000 C CNN "DNP"
+	1    4700 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5D375800
+P 4700 2100
+F 0 "#PWR025" H 4700 1850 50  0001 C CNN
+F 1 "GND" H 4705 1927 50  0000 C CNN
+F 2 "" H 4700 2100 50  0001 C CNN
+F 3 "" H 4700 2100 50  0001 C CNN
+	1    4700 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 1450 4700 1600
+Wire Wire Line
+	4700 1800 4700 1850
+Wire Wire Line
+	4700 2050 4700 2100
+$Comp
+L Device:LED_Small D2
+U 1 1 5D3794D0
+P 4700 1950
+F 0 "D2" V 4746 1882 50  0000 R CNN
+F 1 "LED_RED" V 4655 1882 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" V 4700 1950 50  0001 C CNN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS22-2000-223/LTST-C191KRKT.PDF" V 4700 1950 50  0001 C CNN
+F 4 " LED RED CLEAR SMD " H 4700 1950 50  0001 C CNN "Description"
+F 5 " 160-1447-1-ND " H 4700 1950 50  0001 C CNN "Digikey"
+F 6 "C125099" H 4700 1950 50  0001 C CNN "LCSC"
+F 7 "LTST-C191KRKT" H 4700 1950 50  0001 C CNN "MFG P/N"
+F 8 "Lite-On" H 4700 1950 50  0001 C CNN "Manufacturer"
+F 9 "DNP" V 4700 2100 50  0000 C CNN "DNP"
+	1    4700 1950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 5F9129B7
+P 8150 2200
+F 0 "#PWR026" H 8150 1950 50  0001 C CNN
+F 1 "GND" H 8155 2027 50  0000 C CNN
+F 2 "" H 8150 2200 50  0001 C CNN
+F 3 "" H 8150 2200 50  0001 C CNN
+	1    8150 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 8000 2200
+Wire Wire Line
+	8000 2200 8150 2200
+$Comp
+L Device:Antenna_Loop AE?
+U 1 1 604DA66E
+P 2150 4300
+AR Path="/604DA66E" Ref="AE?"  Part="1" 
+AR Path="/5FFE9EC6/604DA66E" Ref="AE2"  Part="1" 
+F 0 "AE2" V 2154 4480 50  0000 L CNN
+F 1 "U.FL_A-1JB" V 2245 4480 50  0000 L CNN
+F 2 "custom_footprints:CON_AMP_A-1JB" H 2150 4300 50  0001 C CNN
+F 3 "~" H 2150 4300 50  0001 C CNN
+F 4 "DNP" V 2350 4550 50  0000 C CNN "DNP"
+	1    2150 4300
+	0    1    1    0   
+$EndComp
+Text GLabel 1150 4400 0    50   Input ~ 0
+P0.10_NFC2
+Text GLabel 1150 4300 0    50   Input ~ 0
+P0.09_NFC1
+Wire Wire Line
+	1150 4300 1200 4300
+Wire Wire Line
+	1150 4400 1200 4400
+Text Notes 550  3850 0    50   ~ 0
+NFC
+$Comp
+L Device:C_Small C?
+U 1 1 604DA67B
+P 1550 4150
+AR Path="/604DA67B" Ref="C?"  Part="1" 
+AR Path="/5FFE9EC6/604DA67B" Ref="C13"  Part="1" 
+F 0 "C13" H 1642 4241 50  0000 L CNN
+F 1 "300pF" H 1642 4150 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1550 4150 50  0001 C CNN
+F 3 "~" H 1550 4150 50  0001 C CNN
+F 4 "DNP" H 1642 4059 50  0000 L CNN "DNP"
+	1    1550 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 604DA682
+P 1550 4550
+AR Path="/604DA682" Ref="C?"  Part="1" 
+AR Path="/5FFE9EC6/604DA682" Ref="C14"  Part="1" 
+F 0 "C14" H 1642 4641 50  0000 L CNN
+F 1 "300pF" H 1642 4550 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1550 4550 50  0001 C CNN
+F 3 "~" H 1550 4550 50  0001 C CNN
+F 4 "DNP" H 1642 4459 50  0000 L CNN "DNP"
+	1    1550 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1400 4300 1550 4300
+Wire Wire Line
+	1550 4300 1950 4300
+Connection ~ 1550 4300
+Wire Wire Line
+	1550 4250 1550 4300
+Wire Wire Line
+	1550 4400 1550 4450
+Wire Wire Line
+	1400 4400 1550 4400
+Wire Wire Line
+	1550 4400 1950 4400
+Connection ~ 1550 4400
+$Comp
+L power:GND #PWR?
+U 1 1 604DA690
+P 1550 4000
+AR Path="/604DA690" Ref="#PWR?"  Part="1" 
+AR Path="/5FFE9EC6/604DA690" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 1550 3750 50  0001 C CNN
+F 1 "GND" H 1555 3827 50  0000 C CNN
+F 2 "" H 1550 4000 50  0001 C CNN
+F 3 "" H 1550 4000 50  0001 C CNN
+	1    1550 4000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1550 4000 1550 4050
+Wire Wire Line
+	1550 4650 1550 4700
+$Comp
+L Device:R_Small R?
+U 1 1 604DA699
+P 1300 4300
+AR Path="/604DA699" Ref="R?"  Part="1" 
+AR Path="/5FFE9EC6/604DA699" Ref="R7"  Part="1" 
+F 0 "R7" V 1100 4300 50  0000 C CNN
+F 1 "0R" V 1200 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1300 4300 50  0001 C CNN
+F 3 "~" H 1300 4300 50  0001 C CNN
+F 4 "DNP" V 1150 4100 50  0000 C CNN "DNP"
+	1    1300 4300
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 604DA6A0
+P 1300 4400
+AR Path="/604DA6A0" Ref="R?"  Part="1" 
+AR Path="/5FFE9EC6/604DA6A0" Ref="R8"  Part="1" 
+F 0 "R8" V 1400 4400 50  0000 C CNN
+F 1 "0R" V 1500 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 1300 4400 50  0001 C CNN
+F 3 "~" H 1300 4400 50  0001 C CNN
+F 4 "DNP" V 1450 4200 50  0000 C CNN "DNP"
+	1    1300 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 604DA6A6
+P 1550 4700
+AR Path="/604DA6A6" Ref="#PWR?"  Part="1" 
+AR Path="/5FFE9EC6/604DA6A6" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 1550 4450 50  0001 C CNN
+F 1 "GND" H 1555 4527 50  0000 C CNN
+F 2 "" H 1550 4700 50  0001 C CNN
+F 3 "" H 1550 4700 50  0001 C CNN
+	1    1550 4700
+	1    0    0    -1  
+$EndComp
+Text GLabel 7650 4150 2    50   Input ~ 0
+SWDCLK
+Text GLabel 7150 4050 0    50   Input ~ 0
+VDD_nRF
+Text GLabel 7650 4050 2    50   Input ~ 0
+SWDIO
+Text GLabel 7150 4150 0    50   Input ~ 0
+P1.18_RESET
+Text GLabel 7650 4250 2    50   Input ~ 0
+P1.00_SWO
+Text Notes 6350 3850 0    50   ~ 0
+Debug
+Wire Wire Line
+	7100 4250 7150 4250
+$Comp
+L power:GND #PWR?
+U 1 1 604EA1F2
+P 7100 4250
+AR Path="/604EA1F2" Ref="#PWR?"  Part="1" 
+AR Path="/5FFE9EC6/604EA1F2" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 7100 4000 50  0001 C CNN
+F 1 "GND" H 7105 4077 50  0000 C CNN
+F 2 "" H 7100 4250 50  0001 C CNN
+F 3 "" H 7100 4250 50  0001 C CNN
+	1    7100 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J?
+U 1 1 604EA1F8
+P 7350 4150
+AR Path="/604EA1F8" Ref="J?"  Part="1" 
+AR Path="/5FFE9EC6/604EA1F8" Ref="J2"  Part="1" 
+F 0 "J2" H 7400 4467 50  0000 C CNN
+F 1 "Jlink-Tag connect" H 7400 4376 50  0000 C CNN
+F 2 "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical" H 7350 4150 50  0001 C CNN
+F 3 "~" H 7350 4150 50  0001 C CNN
+	1    7350 4150
+	1    0    0    -1  
+$EndComp
+Text Notes 2850 3850 0    50   ~ 0
+RF
+Wire Wire Line
+	3150 4500 3300 4500
+Wire Wire Line
+	3900 4450 3900 4550
+Wire Wire Line
+	3300 4450 3300 4500
+$Comp
+L power:GND #PWR?
+U 1 1 604EA20A
+P 3900 4550
+AR Path="/604EA20A" Ref="#PWR?"  Part="1" 
+AR Path="/5FFE9EC6/604EA20A" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 3900 4300 50  0001 C CNN
+F 1 "GND" H 3905 4377 50  0000 C CNN
+F 2 "" H 3900 4550 50  0001 C CNN
+F 3 "" H 3900 4550 50  0001 C CNN
+	1    3900 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4200 3150 4200
+Wire Wire Line
+	3300 4200 3500 4200
+Connection ~ 3300 4200
+Wire Wire Line
+	3300 4250 3300 4200
+Wire Wire Line
+	3900 4200 4550 4200
+Wire Wire Line
+	3900 4200 3700 4200
+Connection ~ 3900 4200
+Wire Wire Line
+	3900 4250 3900 4200
+NoConn ~ 4750 4200
+$Comp
+L Device:L_Small L?
+U 1 1 604EA21F
+P 3600 4200
+AR Path="/604EA21F" Ref="L?"  Part="1" 
+AR Path="/5FFE9EC6/604EA21F" Ref="L4"  Part="1" 
+F 0 "L4" V 3785 4200 50  0000 C CNN
+F 1 "3.9nH" V 3694 4200 50  0000 C CNN
+F 2 "Inductor_SMD:L_0402_1005Metric" H 3600 4200 50  0001 C CNN
+F 3 "~" H 3600 4200 50  0001 C CNN
+	1    3600 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 604EA225
+P 3900 4350
+AR Path="/604EA225" Ref="C?"  Part="1" 
+AR Path="/5FFE9EC6/604EA225" Ref="C25"  Part="1" 
+F 0 "C25" H 3992 4396 50  0000 L CNN
+F 1 "1pF" H 3992 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3900 4350 50  0001 C CNN
+F 3 "~" H 3900 4350 50  0001 C CNN
+	1    3900 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 604EA22B
+P 3300 4350
+AR Path="/604EA22B" Ref="C?"  Part="1" 
+AR Path="/5FFE9EC6/604EA22B" Ref="C24"  Part="1" 
+F 0 "C24" H 3392 4396 50  0000 L CNN
+F 1 "1pF" H 3392 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3300 4350 50  0001 C CNN
+F 3 "~" H 3300 4350 50  0001 C CNN
+	1    3300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Antenna_Chip AE?
+U 1 1 604EA231
+P 4650 4100
+AR Path="/604EA231" Ref="AE?"  Part="1" 
+AR Path="/5FFE9EC6/604EA231" Ref="AE1"  Part="1" 
+F 0 "AE1" H 4830 4227 50  0000 L CNN
+F 1 "Johanson 2450AT18A100E" H 4830 4136 50  0000 L CNN
+F 2 "RF_Antenna:Johanson_2450AT18x100" H 4550 4275 50  0001 C CNN
+F 3 "~" H 4550 4275 50  0001 C CNN
+	1    4650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 604EA237
+P 900 5400
+AR Path="/604EA237" Ref="H?"  Part="1" 
+AR Path="/5FFE9EC6/604EA237" Ref="H1"  Part="1" 
+F 0 "H1" H 1000 5446 50  0000 L CNN
+F 1 "M.2 Mounting" H 1000 5355 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 900 5400 50  0001 C CNN
+F 3 "~" H 900 5400 50  0001 C CNN
+	1    900  5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_RGBA D?
+U 1 1 604F7209
+P 9850 4400
+AR Path="/604F7209" Ref="D?"  Part="1" 
+AR Path="/5FFE9EC6/604F7209" Ref="D4"  Part="1" 
+F 0 "D4" H 9850 4897 50  0000 C CNN
+F 1 "LED_RGBA" H 9850 4806 50  0000 C CNN
+F 2 "custom_footprints:LED_LiteOn_LTST-C19HE1WT" H 9850 4350 50  0001 C CNN
+F 3 "~" H 9850 4350 50  0001 C CNN
+	1    9850 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 604F720F
+P 9500 4200
+AR Path="/604F720F" Ref="R?"  Part="1" 
+AR Path="/5FFE9EC6/604F720F" Ref="R9"  Part="1" 
+F 0 "R9" V 9400 4200 50  0000 C CNN
+F 1 "1k5" V 9500 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 4200 50  0001 C CNN
+F 3 "~" H 9500 4200 50  0001 C CNN
+	1    9500 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 604F7215
+P 9500 4400
+AR Path="/604F7215" Ref="R?"  Part="1" 
+AR Path="/5FFE9EC6/604F7215" Ref="R10"  Part="1" 
+F 0 "R10" V 9400 4400 50  0000 C CNN
+F 1 "1k5" V 9500 4400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 4400 50  0001 C CNN
+F 3 "~" H 9500 4400 50  0001 C CNN
+	1    9500 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 604F721B
+P 9500 4600
+AR Path="/604F721B" Ref="R?"  Part="1" 
+AR Path="/5FFE9EC6/604F721B" Ref="R11"  Part="1" 
+F 0 "R11" V 9400 4600 50  0000 C CNN
+F 1 "1k5" V 9500 4600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 4600 50  0001 C CNN
+F 3 "~" H 9500 4600 50  0001 C CNN
+	1    9500 4600
+	0    1    1    0   
+$EndComp
+Text GLabel 10100 4400 2    50   Input ~ 0
+VDD_nRF
+Wire Wire Line
+	9600 4200 9650 4200
+Wire Wire Line
+	9600 4400 9650 4400
+Wire Wire Line
+	9600 4600 9650 4600
+Wire Wire Line
+	10050 4400 10100 4400
+Text GLabel 9000 4200 0    50   Input ~ 0
+P1.10
+Text GLabel 9000 4600 0    50   Input ~ 0
+P1.15
+Text GLabel 9000 4400 0    50   Input ~ 0
+P0.29_AIN5
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 604F7229
+P 9200 4200
+AR Path="/604F7229" Ref="JP?"  Part="1" 
+AR Path="/5FFE9EC6/604F7229" Ref="JP6"  Part="1" 
+F 0 "JP6" H 9100 4100 50  0000 C CNN
+F 1 "LED_R" H 9300 4100 50  0000 C CNN
+F 2 "custom_footprints:solder_bridge_closed" H 9200 4200 50  0001 C CNN
+F 3 "~" H 9200 4200 50  0001 C CNN
+	1    9200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 604F722F
+P 9200 4400
+AR Path="/604F722F" Ref="JP?"  Part="1" 
+AR Path="/5FFE9EC6/604F722F" Ref="JP7"  Part="1" 
+F 0 "JP7" H 9100 4300 50  0000 C CNN
+F 1 "LED_G" H 9300 4300 50  0000 C CNN
+F 2 "custom_footprints:solder_bridge_closed" H 9200 4400 50  0001 C CNN
+F 3 "~" H 9200 4400 50  0001 C CNN
+	1    9200 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP?
+U 1 1 604F7235
+P 9200 4600
+AR Path="/604F7235" Ref="JP?"  Part="1" 
+AR Path="/5FFE9EC6/604F7235" Ref="JP8"  Part="1" 
+F 0 "JP8" H 9100 4500 50  0000 C CNN
+F 1 "LED_B" H 9300 4500 50  0000 C CNN
+F 2 "custom_footprints:solder_bridge_closed" H 9200 4600 50  0001 C CNN
+F 3 "~" H 9200 4600 50  0001 C CNN
+	1    9200 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 4200 9050 4200
+Wire Wire Line
+	9350 4200 9400 4200
+Wire Wire Line
+	9000 4400 9050 4400
+Wire Wire Line
+	9350 4400 9400 4400
+Wire Wire Line
+	9400 4600 9350 4600
+Wire Wire Line
+	9050 4600 9000 4600
+Wire Notes Line
+	6300 500  6300 4950
+Wire Notes Line
+	8400 4950 8400 3700
+Wire Notes Line
+	10600 500  10600 4950
+Wire Notes Line
+	500  4950 10600 4950
+Wire Notes Line
+	500  6100 2800 6100
+Wire Notes Line
+	2800 3700 2800 6100
+Wire Notes Line
+	500  500  500  6100
+Text GLabel 3150 4200 0    50   Input ~ 0
+ANT
+Text GLabel 3150 4500 0    50   Input ~ 0
+VSS_PA
+Connection ~ 3300 4500
+Wire Wire Line
+	3300 4500 3300 4550
+$Comp
+L power:GND #PWR?
+U 1 1 604EA210
+P 3300 4550
+AR Path="/604EA210" Ref="#PWR?"  Part="1" 
+AR Path="/5FFE9EC6/604EA210" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 3300 4300 50  0001 C CNN
+F 1 "GND" H 3305 4377 50  0000 C CNN
+F 2 "" H 3300 4550 50  0001 C CNN
+F 3 "" H 3300 4550 50  0001 C CNN
+	1    3300 4550
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
