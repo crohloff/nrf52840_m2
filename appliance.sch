@@ -7,7 +7,7 @@ Sheet 3 3
 Title "nrf52840_m.2 module"
 Date "2020-12-02"
 Rev "0.1"
-Comp "crohloff"
+Comp "crohloff Engineering"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -171,8 +171,6 @@ Wire Wire Line
 	2800 1550 2800 1600
 Connection ~ 2800 1550
 Wire Wire Line
-	2800 1800 2800 1850
-Wire Wire Line
 	2400 1950 2400 2000
 Wire Wire Line
 	1250 1800 1250 1850
@@ -201,17 +199,6 @@ Wire Wire Line
 	1250 1550 1850 1550
 Wire Wire Line
 	1150 1550 1250 1550
-$Comp
-L power:GND #PWR024
-U 1 1 5D3751B3
-P 2800 1850
-F 0 "#PWR024" H 2800 1600 50  0001 C CNN
-F 1 "GND" H 2805 1677 50  0000 C CNN
-F 2 "" H 2800 1850 50  0001 C CNN
-F 3 "" H 2800 1850 50  0001 C CNN
-	1    2800 1850
-	1    0    0    -1  
-$EndComp
 $Comp
 L Battery_Management:MCP73831-2-OT U3
 U 1 1 5D376B89
@@ -300,8 +287,6 @@ Wire Wire Line
 Wire Wire Line
 	7600 2200 8000 2200
 Wire Wire Line
-	8000 2200 8000 2100
-Wire Wire Line
 	7400 2200 7300 2200
 Wire Wire Line
 	7300 2200 7300 1900
@@ -365,73 +350,60 @@ F 8 "ON Semicon" H 1150 1150 50  0001 C CNN "Manufacturer"
 	1    1150 1150
 	1    0    0    -1  
 $EndComp
-Text GLabel 4700 1450 2    50   Input ~ 0
+Text GLabel 5750 850  2    50   Input ~ 0
 VDD_nRF
 $Comp
 L Device:R_Small R4
 U 1 1 5D3752EE
-P 4700 1700
-F 0 "R4" H 4759 1746 50  0000 L CNN
-F 1 "68R" H 4759 1655 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4700 1700 50  0001 C CNN
-F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-AC_51_RoHS_L_6.pdf" H 4700 1700 50  0001 C CNN
-F 4 " RES SMD 68 OHM 1% 1/16W 0402 " H 4700 1700 50  0001 C CNN "Description"
-F 5 " YAG3507CT-ND " H 4700 1700 50  0001 C CNN "Digikey"
-F 6 "C227192" H 4700 1700 50  0001 C CNN "LCSC"
-F 7 "AC0402FR-0768RL" H 4700 1700 50  0001 C CNN "MFG P/N"
-F 8 "Yageo" H 4700 1700 50  0001 C CNN "Manufacturer"
-F 9 "DNP" H 4550 1700 50  0000 C CNN "DNP"
-	1    4700 1700
+P 5750 1100
+F 0 "R4" H 5809 1146 50  0000 L CNN
+F 1 "68R" H 5809 1055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 5750 1100 50  0001 C CNN
+F 3 "http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-AC_51_RoHS_L_6.pdf" H 5750 1100 50  0001 C CNN
+F 4 " RES SMD 68 OHM 1% 1/16W 0402 " H 5750 1100 50  0001 C CNN "Description"
+F 5 " YAG3507CT-ND " H 5750 1100 50  0001 C CNN "Digikey"
+F 6 "C227192" H 5750 1100 50  0001 C CNN "LCSC"
+F 7 "AC0402FR-0768RL" H 5750 1100 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 5750 1100 50  0001 C CNN "Manufacturer"
+F 9 "DNP" H 5600 1100 50  0000 C CNN "DNP"
+	1    5750 1100
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR025
 U 1 1 5D375800
-P 4700 2100
-F 0 "#PWR025" H 4700 1850 50  0001 C CNN
-F 1 "GND" H 4705 1927 50  0000 C CNN
-F 2 "" H 4700 2100 50  0001 C CNN
-F 3 "" H 4700 2100 50  0001 C CNN
-	1    4700 2100
+P 5750 1500
+F 0 "#PWR025" H 5750 1250 50  0001 C CNN
+F 1 "GND" H 5755 1327 50  0000 C CNN
+F 2 "" H 5750 1500 50  0001 C CNN
+F 3 "" H 5750 1500 50  0001 C CNN
+	1    5750 1500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4700 1450 4700 1600
+	5750 850  5750 1000
 Wire Wire Line
-	4700 1800 4700 1850
+	5750 1200 5750 1250
 Wire Wire Line
-	4700 2050 4700 2100
+	5750 1450 5750 1500
 $Comp
 L Device:LED_Small D2
 U 1 1 5D3794D0
-P 4700 1950
-F 0 "D2" V 4746 1882 50  0000 R CNN
-F 1 "LED_RED" V 4655 1882 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" V 4700 1950 50  0001 C CNN
-F 3 "http://optoelectronics.liteon.com/upload/download/DS22-2000-223/LTST-C191KRKT.PDF" V 4700 1950 50  0001 C CNN
-F 4 " LED RED CLEAR SMD " H 4700 1950 50  0001 C CNN "Description"
-F 5 " 160-1447-1-ND " H 4700 1950 50  0001 C CNN "Digikey"
-F 6 "C125099" H 4700 1950 50  0001 C CNN "LCSC"
-F 7 "LTST-C191KRKT" H 4700 1950 50  0001 C CNN "MFG P/N"
-F 8 "Lite-On" H 4700 1950 50  0001 C CNN "Manufacturer"
-F 9 "DNP" V 4700 2100 50  0000 C CNN "DNP"
-	1    4700 1950
+P 5750 1350
+F 0 "D2" V 5796 1282 50  0000 R CNN
+F 1 "LED_RED" V 5705 1282 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" V 5750 1350 50  0001 C CNN
+F 3 "http://optoelectronics.liteon.com/upload/download/DS22-2000-223/LTST-C191KRKT.PDF" V 5750 1350 50  0001 C CNN
+F 4 " LED RED CLEAR SMD " H 5750 1350 50  0001 C CNN "Description"
+F 5 " 160-1447-1-ND " H 5750 1350 50  0001 C CNN "Digikey"
+F 6 "C125099" H 5750 1350 50  0001 C CNN "LCSC"
+F 7 "LTST-C191KRKT" H 5750 1350 50  0001 C CNN "MFG P/N"
+F 8 "Lite-On" H 5750 1350 50  0001 C CNN "Manufacturer"
+F 9 "DNP" V 5750 1500 50  0000 C CNN "DNP"
+	1    5750 1350
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR026
-U 1 1 5F9129B7
-P 8150 2200
-F 0 "#PWR026" H 8150 1950 50  0001 C CNN
-F 1 "GND" H 8155 2027 50  0000 C CNN
-F 2 "" H 8150 2200 50  0001 C CNN
-F 3 "" H 8150 2200 50  0001 C CNN
-	1    8150 2200
-	1    0    0    -1  
-$EndComp
 Connection ~ 8000 2200
-Wire Wire Line
-	8000 2200 8150 2200
 $Comp
 L Device:Antenna_Loop AE?
 U 1 1 604DA66E
@@ -441,8 +413,13 @@ AR Path="/5FFE9EC6/604DA66E" Ref="AE2"  Part="1"
 F 0 "AE2" V 2154 4480 50  0000 L CNN
 F 1 "U.FL_A-1JB" V 2245 4480 50  0000 L CNN
 F 2 "custom_footprints:CON_AMP_A-1JB" H 2150 4300 50  0001 C CNN
-F 3 "~" H 2150 4300 50  0001 C CNN
+F 3 "https://www.amphenolrf.com/media/downloads/2852/CA-1PAX113-XXXYZ.pdf" H 2150 4300 50  0001 C CNN
 F 4 "DNP" V 2350 4550 50  0000 C CNN "DNP"
+F 5 " CONN UMC JACK STR 50 OHM SMD " H 2150 4300 50  0001 C CNN "Description"
+F 6 " ARF1579CT-ND " H 2150 4300 50  0001 C CNN "Digikey"
+F 7 "C88373" H 2150 4300 50  0001 C CNN "LCSC"
+F 8 " A-1JB " H 2150 4300 50  0001 C CNN "MFG P/N"
+F 9 "Amphenol RF Division" H 2150 4300 50  0001 C CNN "Manufacturer"
 	1    2150 4300
 	0    1    1    0   
 $EndComp
@@ -592,7 +569,8 @@ AR Path="/5FFE9EC6/604EA1F8" Ref="J2"  Part="1"
 F 0 "J2" H 7400 4467 50  0000 C CNN
 F 1 "Jlink-Tag connect" H 7400 4376 50  0000 C CNN
 F 2 "Connector:Tag-Connect_TC2030-IDC-NL_2x03_P1.27mm_Vertical" H 7350 4150 50  0001 C CNN
-F 3 "~" H 7350 4150 50  0001 C CNN
+F 3 "" H 7350 4150 50  0001 C CNN
+F 4 "DNP" H 7350 4150 50  0001 C CNN "DNP"
 	1    7350 4150
 	1    0    0    -1  
 $EndComp
@@ -641,7 +619,12 @@ AR Path="/5FFE9EC6/604EA21F" Ref="L4"  Part="1"
 F 0 "L4" V 3785 4200 50  0000 C CNN
 F 1 "3.9nH" V 3694 4200 50  0000 C CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 3600 4200 50  0001 C CNN
-F 3 "~" H 3600 4200 50  0001 C CNN
+F 3 "https://psearch.en.murata.com/inductor/product/LQG15HN3N9S02_.pdf" H 3600 4200 50  0001 C CNN
+F 4 " FIXED IND 3.9NH 700MA 190 MOHM " H 3600 4200 50  0001 C CNN "Description"
+F 5 " 490-1079-1-ND " H 3600 4200 50  0001 C CNN "Digikey"
+F 6 "C97987" H 3600 4200 50  0001 C CNN "LCSC"
+F 7 "LQG15HN3N9S02D" H 3600 4200 50  0001 C CNN "MFG P/N"
+F 8 "Murata Electronics" H 3600 4200 50  0001 C CNN "Manufacturer"
 	1    3600 4200
 	0    -1   -1   0   
 $EndComp
@@ -654,7 +637,12 @@ AR Path="/5FFE9EC6/604EA225" Ref="C25"  Part="1"
 F 0 "C25" H 3992 4396 50  0000 L CNN
 F 1 "1pF" H 3992 4305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3900 4350 50  0001 C CNN
-F 3 "~" H 3900 4350 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GP_NP0_16V-to-50V_16.pdf" H 3900 4350 50  0001 C CNN
+F 4 " CAP CER 1PF 50V C0G/NPO 0402 " H 3900 4350 50  0001 C CNN "Description"
+F 5 " 311-2076-1-ND " H 3900 4350 50  0001 C CNN "Digikey"
+F 6 "C277493" H 3900 4350 50  0001 C CNN "LCSC"
+F 7 "CC0402CRNPO9BN1R0" H 3900 4350 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 3900 4350 50  0001 C CNN "Manufacturer"
 	1    3900 4350
 	1    0    0    -1  
 $EndComp
@@ -667,7 +655,12 @@ AR Path="/5FFE9EC6/604EA22B" Ref="C24"  Part="1"
 F 0 "C24" H 3392 4396 50  0000 L CNN
 F 1 "1pF" H 3392 4305 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3300 4350 50  0001 C CNN
-F 3 "~" H 3300 4350 50  0001 C CNN
+F 3 "http://www.yageo.com/documents/recent/UPY-GP_NP0_16V-to-50V_16.pdf" H 3300 4350 50  0001 C CNN
+F 4 " CAP CER 1PF 50V C0G/NPO 0402 " H 3300 4350 50  0001 C CNN "Description"
+F 5 " 311-2076-1-ND " H 3300 4350 50  0001 C CNN "Digikey"
+F 6 "C277493" H 3300 4350 50  0001 C CNN "LCSC"
+F 7 "CC0402CRNPO9BN1R0" H 3300 4350 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 3300 4350 50  0001 C CNN "Manufacturer"
 	1    3300 4350
 	1    0    0    -1  
 $EndComp
@@ -680,21 +673,27 @@ AR Path="/5FFE9EC6/604EA231" Ref="AE1"  Part="1"
 F 0 "AE1" H 4830 4227 50  0000 L CNN
 F 1 "Johanson 2450AT18A100E" H 4830 4136 50  0000 L CNN
 F 2 "RF_Antenna:Johanson_2450AT18x100" H 4550 4275 50  0001 C CNN
-F 3 "~" H 4550 4275 50  0001 C CNN
+F 3 "https://www.johansontechnology.com/datasheets/2450AT18A100/2450AT18A100.pdf" H 4550 4275 50  0001 C CNN
+F 4 "RF ANT 2.4GHZ CHIP SOLDER SMD" H 4650 4100 50  0001 C CNN "Description"
+F 5 "712-1005-1-ND" H 4650 4100 50  0001 C CNN "Digikey"
+F 6 "C89334" H 4650 4100 50  0001 C CNN "LCSC"
+F 7 "2450AT18A100E" H 4650 4100 50  0001 C CNN "MFG P/N"
+F 8 "Johanson Technology Inc. " H 4650 4100 50  0001 C CNN "Manufacturer"
 	1    4650 4100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H?
 U 1 1 604EA237
-P 900 5400
+P 700 5500
 AR Path="/604EA237" Ref="H?"  Part="1" 
 AR Path="/5FFE9EC6/604EA237" Ref="H1"  Part="1" 
-F 0 "H1" H 1000 5446 50  0000 L CNN
-F 1 "M.2 Mounting" H 1000 5355 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 900 5400 50  0001 C CNN
-F 3 "~" H 900 5400 50  0001 C CNN
-	1    900  5400
+F 0 "H1" H 800 5546 50  0000 L CNN
+F 1 "M.2 Mounting" H 800 5455 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 700 5500 50  0001 C CNN
+F 3 "" H 700 5500 50  0001 C CNN
+F 4 "DNP" H 700 5500 50  0001 C CNN "DNP"
+	1    700  5500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -706,7 +705,12 @@ AR Path="/5FFE9EC6/604F7209" Ref="D4"  Part="1"
 F 0 "D4" H 9850 4897 50  0000 C CNN
 F 1 "LED_RGBA" H 9850 4806 50  0000 C CNN
 F 2 "custom_footprints:LED_LiteOn_LTST-C19HE1WT" H 9850 4350 50  0001 C CNN
-F 3 "~" H 9850 4350 50  0001 C CNN
+F 3 "optoelectronics.liteon.com/upload/download/DS22-2008-0044/LTST-C19HE1WT.pdf" H 9850 4350 50  0001 C CNN
+F 4 "LED RGB DIFFUSED CHIP SMD" H 9850 4400 50  0001 C CNN "Description"
+F 5 "160-2162-1-ND" H 9850 4400 50  0001 C CNN "Digikey"
+F 6 "C458749" H 9850 4400 50  0001 C CNN "LCSC"
+F 7 "LTST-C19HE1WT" H 9850 4400 50  0001 C CNN "MFG P/N"
+F 8 "Lite-On Inc." H 9850 4400 50  0001 C CNN "Manufacturer"
 	1    9850 4400
 	1    0    0    -1  
 $EndComp
@@ -719,7 +723,12 @@ AR Path="/5FFE9EC6/604F720F" Ref="R9"  Part="1"
 F 0 "R9" V 9400 4200 50  0000 C CNN
 F 1 "1k5" V 9500 4200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 4200 50  0001 C CNN
-F 3 "~" H 9500 4200 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 9500 4200 50  0001 C CNN
+F 4 "RES SMD 1.5K OHM 1% 1/16W 0402" H 9500 4200 50  0001 C CNN "Description"
+F 5 "311-1.50KLRCT-ND" H 9500 4200 50  0001 C CNN "Digikey"
+F 6 "C114759 " H 9500 4200 50  0001 C CNN "LCSC"
+F 7 "RC0402FR-071K5L" H 9500 4200 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 9500 4200 50  0001 C CNN "Manufacturer"
 	1    9500 4200
 	0    1    1    0   
 $EndComp
@@ -732,7 +741,12 @@ AR Path="/5FFE9EC6/604F7215" Ref="R10"  Part="1"
 F 0 "R10" V 9400 4400 50  0000 C CNN
 F 1 "1k5" V 9500 4400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 4400 50  0001 C CNN
-F 3 "~" H 9500 4400 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 9500 4400 50  0001 C CNN
+F 4 "RES SMD 1.5K OHM 1% 1/16W 0402" H 9500 4400 50  0001 C CNN "Description"
+F 5 "311-1.50KLRCT-ND" H 9500 4400 50  0001 C CNN "Digikey"
+F 6 "C114759 " H 9500 4400 50  0001 C CNN "LCSC"
+F 7 "RC0402FR-071K5L" H 9500 4400 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 9500 4400 50  0001 C CNN "Manufacturer"
 	1    9500 4400
 	0    1    1    0   
 $EndComp
@@ -745,7 +759,12 @@ AR Path="/5FFE9EC6/604F721B" Ref="R11"  Part="1"
 F 0 "R11" V 9400 4600 50  0000 C CNN
 F 1 "1k5" V 9500 4600 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 4600 50  0001 C CNN
-F 3 "~" H 9500 4600 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_11.pdf" H 9500 4600 50  0001 C CNN
+F 4 "RES SMD 1.5K OHM 1% 1/16W 0402" H 9500 4600 50  0001 C CNN "Description"
+F 5 "311-1.50KLRCT-ND" H 9500 4600 50  0001 C CNN "Digikey"
+F 6 "C114759 " H 9500 4600 50  0001 C CNN "LCSC"
+F 7 "RC0402FR-071K5L" H 9500 4600 50  0001 C CNN "MFG P/N"
+F 8 "Yageo" H 9500 4600 50  0001 C CNN "Manufacturer"
 	1    9500 4600
 	0    1    1    0   
 $EndComp
@@ -774,7 +793,8 @@ AR Path="/5FFE9EC6/604F7229" Ref="JP6"  Part="1"
 F 0 "JP6" H 9100 4100 50  0000 C CNN
 F 1 "LED_R" H 9300 4100 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_closed" H 9200 4200 50  0001 C CNN
-F 3 "~" H 9200 4200 50  0001 C CNN
+F 3 "" H 9200 4200 50  0001 C CNN
+F 4 "DNP" H 9200 4200 50  0001 C CNN "DNP"
 	1    9200 4200
 	1    0    0    -1  
 $EndComp
@@ -787,7 +807,8 @@ AR Path="/5FFE9EC6/604F722F" Ref="JP7"  Part="1"
 F 0 "JP7" H 9100 4300 50  0000 C CNN
 F 1 "LED_G" H 9300 4300 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_closed" H 9200 4400 50  0001 C CNN
-F 3 "~" H 9200 4400 50  0001 C CNN
+F 3 "" H 9200 4400 50  0001 C CNN
+F 4 "DNP" H 9200 4400 50  0001 C CNN "DNP"
 	1    9200 4400
 	1    0    0    -1  
 $EndComp
@@ -800,7 +821,8 @@ AR Path="/5FFE9EC6/604F7235" Ref="JP8"  Part="1"
 F 0 "JP8" H 9100 4500 50  0000 C CNN
 F 1 "LED_B" H 9300 4500 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_closed" H 9200 4600 50  0001 C CNN
-F 3 "~" H 9200 4600 50  0001 C CNN
+F 3 "" H 9200 4600 50  0001 C CNN
+F 4 "DNP" H 9200 4600 50  0001 C CNN "DNP"
 	1    9200 4600
 	1    0    0    -1  
 $EndComp
@@ -848,6 +870,75 @@ F 1 "GND" H 3305 4377 50  0000 C CNN
 F 2 "" H 3300 4550 50  0001 C CNN
 F 3 "" H 3300 4550 50  0001 C CNN
 	1    3300 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 2200 8000 2100
+Wire Wire Line
+	8000 2200 8150 2200
+$Comp
+L power:GND #PWR026
+U 1 1 5F9129B7
+P 8150 2200
+F 0 "#PWR026" H 8150 1950 50  0001 C CNN
+F 1 "GND" H 8155 2027 50  0000 C CNN
+F 2 "" H 8150 2200 50  0001 C CNN
+F 3 "" H 8150 2200 50  0001 C CNN
+	1    8150 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 1800 2800 1850
+$Comp
+L power:GND #PWR024
+U 1 1 5D3751B3
+P 2800 1850
+F 0 "#PWR024" H 2800 1600 50  0001 C CNN
+F 1 "GND" H 2805 1677 50  0000 C CNN
+F 2 "" H 2800 1850 50  0001 C CNN
+F 3 "" H 2800 1850 50  0001 C CNN
+	1    2800 1850
+	1    0    0    -1  
+$EndComp
+Text Notes 5500 650  0    50   ~ 0
+3.3V LED indicator
+Wire Notes Line
+	5450 500  5450 1850
+Wire Notes Line
+	5450 1850 6300 1850
+Text Notes 8450 3850 0    50   ~ 0
+RGB LED
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 600C9229
+P 2150 5200
+F 0 "FID1" H 2235 5246 50  0000 L CNN
+F 1 "Fiducial" H 2235 5155 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 2150 5200 50  0001 C CNN
+F 3 "~" H 2150 5200 50  0001 C CNN
+	1    2150 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 600C93F2
+P 2150 5450
+F 0 "FID2" H 2235 5496 50  0000 L CNN
+F 1 "Fiducial" H 2235 5405 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 2150 5450 50  0001 C CNN
+F 3 "~" H 2150 5450 50  0001 C CNN
+	1    2150 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID3
+U 1 1 600D79DE
+P 2150 5700
+F 0 "FID3" H 2235 5746 50  0000 L CNN
+F 1 "Fiducial" H 2235 5655 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1mm" H 2150 5700 50  0001 C CNN
+F 3 "~" H 2150 5700 50  0001 C CNN
+	1    2150 5700
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

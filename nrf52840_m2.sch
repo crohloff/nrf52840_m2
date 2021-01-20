@@ -7,7 +7,7 @@ Sheet 1 3
 Title "nrf52840_m.2 module"
 Date "2020-12-02"
 Rev "0.1"
-Comp "crohloff"
+Comp "crohloff Engineering"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -968,10 +968,15 @@ $Comp
 L nrf52840:nRF52840 U1
 U 1 1 5FE47ADA
 P 5650 4050
-F 0 "U1" H 5550 2461 50  0000 C CNN
-F 1 "nRF52840" H 5550 2370 50  0000 C CNN
+F 0 "U1" H 5650 4050 50  0000 C CNN
+F 1 "nRF52840" H 5650 3950 50  0000 C CNN
 F 2 "custom_footprints:Nordic_AQFN-73-1EP_7x7mm_P0.5mm" H 5650 3850 50  0001 C CNN
 F 3 "https://infocenter.nordicsemi.com/pdf/nRF52840_PS_v1.1.pdf" H 5000 5950 50  0001 C CNN
+F 4 " IC RF TXRX+MCU 802.15.4 73VFQFN " H 5650 4050 50  0001 C CNN "Description"
+F 5 " 1490-1071-1-ND " H 5650 4050 50  0001 C CNN "Digikey"
+F 6 "C190794" H 5650 4050 50  0001 C CNN "LCSC"
+F 7 "NRF52840-QIAA-R" H 5650 4050 50  0001 C CNN "MFG P/N"
+F 8 "Nordic Semicon " H 5650 4050 50  0001 C CNN "Manufacturer"
 	1    5650 4050
 	1    0    0    -1  
 $EndComp

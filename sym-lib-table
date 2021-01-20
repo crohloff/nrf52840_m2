@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name nrf52840)(type Legacy)(uri ${KIPRJMOD}/custom_symbols/nrf52840.lib)(options "")(descr ""))
   (lib (name bus_m.2_socket_b)(type Legacy)(uri ${KIPRJMOD}/custom_symbols/bus_m.2_socket_b.lib)(options "")(descr ""))
+  (lib (name nrf52840_m2-rescue)(type Legacy)(uri ${KIPRJMOD}/nrf52840_m2-rescue.lib)(options "")(descr ""))
 )

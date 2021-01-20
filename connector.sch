@@ -7,7 +7,7 @@ Sheet 2 3
 Title "nrf52840_m.2 module"
 Date "2020-12-02"
 Rev "0.1"
-Comp "crohloff"
+Comp "crohloff Engineering"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -30,7 +30,8 @@ AR Path="/60498718/604A8C9F" Ref="JP2"  Part="1"
 F 0 "JP2" H 4000 2850 50  0000 C CNN
 F 1 "NFC1" H 4000 2750 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_closed" H 4000 2950 50  0001 C CNN
-F 3 "~" H 4000 2950 50  0001 C CNN
+F 3 "" H 4000 2950 50  0001 C CNN
+F 4 "DNP" H 4000 2950 50  0001 C CNN "DNP"
 	1    4000 2950
 	1    0    0    -1  
 $EndComp
@@ -43,7 +44,8 @@ AR Path="/60498718/604A8CA5" Ref="JP1"  Part="1"
 F 0 "JP1" H 4000 3050 50  0000 C CNN
 F 1 "NFC2" H 4000 2950 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_closed" H 4000 2850 50  0001 C CNN
-F 3 "~" H 4000 2850 50  0001 C CNN
+F 3 "" H 4000 2850 50  0001 C CNN
+F 4 "DNP" H 4000 2850 50  0001 C CNN "DNP"
 	1    4000 2850
 	1    0    0    -1  
 $EndComp
@@ -135,7 +137,8 @@ AR Path="/60498718/604A8CD3" Ref="JP3"  Part="1"
 F 0 "JP3" H 6750 5250 50  0000 C CNN
 F 1 "LED_R" H 6750 5350 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_open" H 6750 5150 50  0001 C CNN
-F 3 "~" H 6750 5150 50  0001 C CNN
+F 3 "" H 6750 5150 50  0001 C CNN
+F 4 "DNP" H 6750 5150 50  0001 C CNN "DNP"
 	1    6750 5150
 	1    0    0    -1  
 $EndComp
@@ -148,7 +151,8 @@ AR Path="/60498718/604A8CD9" Ref="JP4"  Part="1"
 F 0 "JP4" H 7450 5350 50  0000 C CNN
 F 1 "LED_G" H 7450 5450 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_open" H 7450 5250 50  0001 C CNN
-F 3 "~" H 7450 5250 50  0001 C CNN
+F 3 "" H 7450 5250 50  0001 C CNN
+F 4 "DNP" H 7450 5250 50  0001 C CNN "DNP"
 	1    7450 5250
 	1    0    0    -1  
 $EndComp
@@ -161,7 +165,8 @@ AR Path="/60498718/604A8CDF" Ref="JP5"  Part="1"
 F 0 "JP5" H 7450 5250 50  0000 C CNN
 F 1 "LED_B" H 7450 5150 50  0000 C CNN
 F 2 "custom_footprints:solder_bridge_open" H 7450 5350 50  0001 C CNN
-F 3 "~" H 7450 5350 50  0001 C CNN
+F 3 "" H 7450 5350 50  0001 C CNN
+F 4 "DNP" H 7450 5350 50  0001 C CNN "DNP"
 	1    7450 5350
 	1    0    0    -1  
 $EndComp
@@ -225,23 +230,24 @@ Wire Wire Line
 	6550 5250 7300 5250
 Wire Wire Line
 	6550 5350 7300 5350
-$Comp
-L bus_m.2_socket_b:Bus_M.2_Socket_B J?
-U 1 1 604A8D05
-P 5550 3750
-AR Path="/604A8D05" Ref="J?"  Part="1" 
-AR Path="/60498718/604A8D05" Ref="J1"  Part="1" 
-F 0 "J1" H 5550 3850 50  0000 C CNN
-F 1 "Bus_M.2_Socket_B" H 5550 3750 50  0000 C CNN
-F 2 "custom_footprints:NGFF_B" H 5550 4800 50  0001 C CNN
-F 3 "http://read.pudn.com/downloads794/doc/project/3133918/PCIe_M.2_Electromechanical_Spec_Rev1.0_Final_11012013_RS_Clean.pdf#page=154" H 5550 4800 50  0001 C CNN
-	1    5550 3750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6550 5150 6600 5150
 Wire Wire Line
 	6550 5450 6600 5450
 Wire Wire Line
 	4500 3050 4550 3050
+$Comp
+L bus_m.2_socket_b:Bus_M.2_Socket_B J1
+U 1 1 5FD7D178
+P 5550 3750
+F 0 "J1" H 5550 3900 50  0000 C CNN
+F 1 "Bus_M.2_Socket_B" H 5550 3750 50  0000 C CNN
+F 2 "custom_footprints:NGFF_B" H 5550 4800 50  0001 C CNN
+F 3 "" H 5550 4800 50  0001 C CNN
+F 4 "DNP" H 5550 3750 50  0001 C CNN "DNP"
+	1    5550 3750
+	1    0    0    -1  
+$EndComp
+Text Notes 7000 6650 0    50   ~ 0
+M.2 B-key
 $EndSCHEMATC
