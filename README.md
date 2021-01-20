@@ -1,4 +1,8 @@
 # nrf52840_m2
+nrf52840 based M.2 b-key module
+
+## dimensions
+- 22mm x 30mm
 
 ## features
 - m.2 2230 b-key form factor board
