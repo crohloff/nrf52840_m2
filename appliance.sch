@@ -5,9 +5,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title "nrf52840_m.2 module"
-Date "2020-12-02"
-Rev "0.1"
-Comp "crohloff Engineering"
+Date "2021-05-13"
+Rev "1.0"
+Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -690,7 +690,7 @@ AR Path="/604EA237" Ref="H?"  Part="1"
 AR Path="/5FFE9EC6/604EA237" Ref="H1"  Part="1" 
 F 0 "H1" H 800 5546 50  0000 L CNN
 F 1 "M.2 Mounting" H 800 5455 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.2mm_M2_Pad" H 700 5500 50  0001 C CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 700 5500 50  0001 C CNN
 F 3 "" H 700 5500 50  0001 C CNN
 F 4 "DNP" H 700 5500 50  0001 C CNN "DNP"
 	1    700  5500

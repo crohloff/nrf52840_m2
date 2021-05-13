@@ -5,9 +5,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "nrf52840_m.2 module"
-Date "2020-12-02"
-Rev "0.1"
-Comp "crohloff Engineering"
+Date "2021-05-13"
+Rev "1.0"
+Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
